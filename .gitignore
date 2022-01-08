@@ -1,0 +1,7 @@
+*.d
+*.o
+*.a
+*.swo
+*.swp
+*.pdf
+a.out
