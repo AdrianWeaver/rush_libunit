@@ -30,4 +30,6 @@ fclean:		clean
 
 re:			fclean all
 
+test:		all && #ajouter suite de cette ligne 
+
 .PHONY:		all re clean fclean
