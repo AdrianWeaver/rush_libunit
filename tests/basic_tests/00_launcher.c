@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 12:10:03 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 20:50:11 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/09 21:26:45 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ int	ft_basic_launcher(void)
 	t_basic = ft_test_lst_new("basic_tests", "theoreticaly segfault",
 			&ft_test_segfault, t_basic);
 	t_basic = ft_test_lst_new("basic_tests", "theoreticaly bus error",
-			&ft_bus_error, t_basic);
+			&ft_test_bus_error, t_basic);
 	t_basic = ft_test_lst_new("basic_tests", "theoreticaly sigabort",
-			&ft_sigabort, t_basic);
-	t_basic = ft_test_lst_new("basic_tests", "theoreticaly sigfpe", &ft_sigfpe,
-			t_basic);
+			&ft_test_sigabort, t_basic);
+	t_basic = ft_test_lst_new("basic_tests", "theoreticaly sigfpe",
+			&ft_test_sigfpe, t_basic);
 	t_basic = ft_test_lst_new("basic_tests", "theoreticaly sigill.c",
 			&ft_test_sigill, t_basic);
 	return (ft_launch_test(t_start));

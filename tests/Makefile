@@ -2,7 +2,7 @@ NAME			=	libunit_tester
 
 CC				= 	gcc
 
-CFLAGS			=	-Wall -Wextra -Werror
+CFLAGS			=	-Wall -Wextra -Werror -fsanitize=address
 
 INC				=	-I ../framework/						\
 					-I ../libft/							\
