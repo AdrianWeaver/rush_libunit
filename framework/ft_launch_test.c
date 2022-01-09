@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 15:11:35 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 22:17:14 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/09 22:45:51 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	ft_launch_test(t_test_list *lst)
 		lst = lst->next;
 		nb_test++;
 	}
-	ft_print_total(nb_test, success);
+	ft_print_total(success, nb_test);
 	ft_lstclear(&lst, &ft_del);
 	if (success == nb_test)
 		return (0);
