@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printresult.c                                   :+:      :+:    :+:   */
+/*   ft_print_result.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/08 15:25:20 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/08 17:28:57 by aweaver          ###   ########.fr       */
+/*   Created: 2022/01/09 16:42:01 by aweaver           #+#    #+#             */
+/*   Updated: 2022/01/09 16:43:42 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
-#include "./libft/libft.h"
+#include "libft.h"
 #include <sys/types.h>
 #include <sys/wait.h>
 
-void	ft_print_result(t_test_list current, int w_result)
+void	ft_print_result(int w_result)
 {
-	ft_putstr(current->func_name);
-	ft_putstr(current->test_name);
 	if (w_result == 32)
 		ft_putstr("OK : Test succeeded.\n");
 	else if (w_result == 33)
@@ -33,13 +31,4 @@ void	ft_print_result(t_test_list current, int w_result)
 		ft_putstr("SIGFPE: Floating point exception.\n");
 	else if (w_result == 4)
 		ft_putstr("SIGILL: Illegal instruction.\n");
-}
-
-void	ft_check_result(int w_result)
-{
-	if (WIFEXITED(w_result))
-		w_result = WEXITSTATUS(w_result);
-	else if (WIFSIGNALED(w_result))
-		w_result = WTERMSIG(w_result);
-	ft_print_result(w_result);
 }
