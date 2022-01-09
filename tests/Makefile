@@ -2,7 +2,7 @@ NAME			=	libunit_tester
 
 CC				=	gcc
 
-CFLAGS			=	-Wall -Wextra -Werror
+CFLAGS			=	-MMD -Wall -Wextra -Werror
 
 INC				=	-I ../framework/						\
 					-I ../libft/
@@ -43,7 +43,7 @@ $(NAME):		$(OBJS)
 				$(CC) -o $(NAME) $(OBJS)
 
 %.o:			%.c
-				$(CC) $(CFLAGS) -c $^ -o $@ -MMD $(INC)
+				$(CC) $(CFLAGS) -c $^ -o $@ $(INC)
 
 clean:
 				rm -f $(OBJS)

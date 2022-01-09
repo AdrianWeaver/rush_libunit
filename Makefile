@@ -24,9 +24,11 @@ $(LIBFT):
 
 clean:
 			rm -f $(OBJS)
+			$(MAKE) -C $(LIBFT_PATH) clean
 
 fclean:		clean
 			rm -f $(NAME)
+			$(MAKE) -C $(LIBFT_PATH) fclean
 
 re:			fclean all
 
