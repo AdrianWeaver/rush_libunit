@@ -2,7 +2,7 @@ NAME			=	libunit_tester
 
 CC				= 	gcc
 
-CFLAGS			=	-Wall -Wextra -Werror -fsanitize=address
+CFLAGS			=	-Wall -Wextra -Werror
 
 INC				=	-I ../framework/						\
 					-I ../libft/							\
@@ -16,12 +16,8 @@ SRCS			=	main.c									\
 				$(addprefix $(TEST_PATH),\
 				00_launcher.c								\
 				01_ok_test.c								\
-				02_ko_test.c							\
-				03_segfault.c									\
-				04_bus_error.c								\
-				05_sigabort.c\
-				06_sigfpe.c\
-				07_sigill.c)
+				02_ko_test.c								\
+				03_segfault.c)
 
 OBJS			=	$(SRCS:.c=.o)
 
