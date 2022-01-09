@@ -6,7 +6,7 @@ LIBFT		=	$(addprefix $(LIBFT_PATH),libft.a)
 
 CC			=	gcc
 
-CFLAGS		=	-MMD -Wall -Werror -Wextra
+CFLAGS		=	-Wall -Werror -Wextra
 
 SRCS_PATH	=	./framework/
 
@@ -21,8 +21,6 @@ SRCS		=	$(addprefix $(SRCS_PATH),\
 
 OBJS		=	$(SRCS:.c=.o)
 
-DEP			=	$(OBJS:.o=.d)
-
 INC			=	-I ./framework/				\
 				-I ./libft/
 
@@ -30,8 +28,6 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS) $(LIBFT)
 			ar -rcs $(NAME) $^
-
--include $(DEP)
 
 $(LIBFT):		
 			$(MAKE) -C $(LIBFT_PATH) all
@@ -41,7 +37,6 @@ $(LIBFT):
 
 clean:
 			rm -f $(OBJS)
-			rm -f $(DEP)
 			$(MAKE) -C $(LIBFT_PATH) clean
 
 fclean:		clean
@@ -50,6 +45,6 @@ fclean:		clean
 
 re:			fclean all
 
-test:		all && #ajouter suite de cette ligne 
+test:		all #ajouter suite de cette ligne 
 
 .PHONY:		all re clean fclean

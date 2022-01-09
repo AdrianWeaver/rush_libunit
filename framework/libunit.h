@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 12:16:55 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 17:50:44 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/09 19:28:19 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,7 @@
 # include <sys/types.h>
 # include <sys/wait.h>
 # include <unistd.h>
-
-# ifndef T_TEST_LIST
-#  define T_TEST_LIST
-
-typedef struct s_test_list
-{
-	char				*routine_name;
-	char				*test_name;
-	int					(*funct)(void);
-	struct s_test_list	*next;
-}				t_test_list;
-
-# endif
+# include "libft.h"
 
 # ifndef FT_TEST_LST_NEW
 #  define FT_TEST_LST_NEW
@@ -81,4 +69,10 @@ int			ft_launch_test(t_test_list *lst);
 void		del(void *content);
 # endif
 
+# ifndef FT_MAKE_MAGIC
+#  define FT_MAKE_MAGIC
+
+int			ft_make_magic(t_test_list *lst);
+
+# endif
 #endif

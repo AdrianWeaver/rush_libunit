@@ -6,12 +6,12 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 10:20:48 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 18:14:06 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/09 18:56:27 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_FT_ATOI_H
-# define TEST_FT_ATOI_H
+#ifndef LIBFT_TEST_ATOI_H
+# define LIBFT_TEST_ATOI_H
 
 # ifndef FT_ATOI_LAUNCHER
 #  define FT_ATOI_LAUNCHER
@@ -72,17 +72,7 @@ int	test_not_printable(void);
 #  define TEST_BIGGER_THAN_INT_MAX
 
 int	test_bigger_than_int_max(void);
-# endif
-
-# ifndef TEST_BIGGER_THAN_INT_MAX2
-#  define TEST_BIGGER_THAN_INT_MAX2
-
 int	test_bigger_than_int_max2(void);
-# endif
-
-# ifndef TEST_BIGGER_THAN_INT_MAX3
-#  define TEST_BIGGER_THAN_INT_MAX3
-
 int	test_bigger_than_int_max3(void);
 # endif
 
