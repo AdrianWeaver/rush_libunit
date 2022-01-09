@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_result.c                                  :+:      :+:    :+:   */
+/*   08_not_printable.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 16:42:01 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 17:10:04 by aweaver          ###   ########.fr       */
+/*   Created: 2022/01/09 10:48:25 by aweaver           #+#    #+#             */
+/*   Updated: 2022/01/09 18:05:12 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
 #include "libft.h"
-#include <sys/types.h>
-#include <sys/wait.h>
+#include "libunit.h"
 
-void	ft_check_result(int w_status, int *success)
+int	test_not_printable(void)
 {
-	int	w_result;
-
-	if (WIFEXITED(w_status))
-		w_result = WEXITSTATUS(w_status);
-	else if (WIFSIGNALED(w_status))
-		w_result = WTERMSIG(w_status);
-	ft_print_result(w_result);
-	if (w_result == 32)
-		(*success)++;
+	if (ft_atoi("\a") == 0)
+		return (0);
+	else
+		return (-1);
 }

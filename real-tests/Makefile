@@ -5,10 +5,11 @@ CC				=	gcc
 CFLAGS			=	-MMD -Wall -Wextra -Werror
 
 INC				=	-I ../framework/						\
-					-I ../libft/
+					-I ../libft/							\
+					-I ./real_tests/
 
 SRCS			=	main.c									\
-				$(addprefix $(FT_ATOI_PATH),\
+				$(addprefix $(TEST_PATH),\
 				01_odd_values.c								\
 				02_even_values.c							\
 				03_zero.c									\
@@ -33,9 +34,7 @@ OBJS			=	$(SRCS:.c=.o)
 
 DEP				=	$(OBJS:.o=.d)
 
-FT_ATOI_PATH	=	./ft_atoi/
-
-REAL_TEST_PATH	=	./real_test/
+TEST_PATH	=	./real_tests/
 
 all:			$(NAME)
 

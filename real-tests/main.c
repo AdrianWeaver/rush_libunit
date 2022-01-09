@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_test.c                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 16:04:42 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 17:55:01 by aweaver          ###   ########.fr       */
+/*   Created: 2022/01/08 14:01:24 by emaugale          #+#    #+#             */
+/*   Updated: 2022/01/09 18:13:05 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "libunit.h"
+#include "libft_test_atoi.h"
 
-void	ft_print_test(t_test_list *lst)
+int	main(int ac, char **av)
 {
-	ft_putchar_fd('[', 1);
-	ft_putstr_fd(lst->routine_name, 1);
-	ft_putstr_fd("]:", 1);
-	ft_putchar_fd('[', 1);
-	ft_putstr_fd(lst->test_name, 1);
-	ft_putstr_fd("]:", 1);
+	(void)ac;
+	(void)av;
+	ft_atoi_launcher();
+	return (0);
 }

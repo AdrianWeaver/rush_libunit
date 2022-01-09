@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   18_whitespace_incorrect.c                          :+:      :+:    :+:   */
+/*   02_even_values.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 11:53:43 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 11:54:08 by aweaver          ###   ########.fr       */
+/*   Created: 2022/01/09 10:20:16 by aweaver           #+#    #+#             */
+/*   Updated: 2022/01/09 18:04:43 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "libunit.h"
-#include "test_ft_atoi.h"
 
-int	test_whitespace_incorrect(void)
+int	test_even_values(void)
 {
-	if (ft_atoi("\r\r-\r42") == 0)
+	if (ft_atoi("22") == 22)
 		return (0);
 	else
 		return (-1);

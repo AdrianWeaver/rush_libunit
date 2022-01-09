@@ -6,12 +6,12 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 12:10:03 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 15:08:35 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/09 18:03:39 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
-#include "test_ft_atoi.h"
+#include "libft_test_atoi.h"
 
 int	ft_atoi_launcher(void)
 {

@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   11_bigger_than_int_max3.c                          :+:      :+:    :+:   */
+/*   04_minus_zero.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 13:05:31 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 13:37:42 by aweaver          ###   ########.fr       */
+/*   Created: 2022/01/09 10:28:04 by aweaver           #+#    #+#             */
+/*   Updated: 2022/01/09 18:04:49 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "libunit.h"
-#include "test_ft_atoi.h"
 
-int	test_bigger_than_int_max3(void)
+int	test_minus_zero(void)
 {
-	ft_atoi("9223372036854775809");
-	return (0);
+	if (ft_atoi("-0") == 0)
+		return (0);
+	else
+		return (-1);
 }

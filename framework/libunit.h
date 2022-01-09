@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 12:16:55 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 16:48:47 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/09 17:50:44 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 # define LIBUNIT_H
 
 # include <sys/types.h>
+# include <sys/wait.h>
 # include <unistd.h>
 
-# ifndef TEST_LIST
-#  define TEST_LIST
+# ifndef T_TEST_LIST
+#  define T_TEST_LIST
 
-typedef struct test_list
+typedef struct s_test_list
 {
 	char				*routine_name;
 	char				*test_name;
 	int					(*funct)(void);
-	struct test_list	*next;
+	struct s_test_list	*next;
 }				t_test_list;
 
 # endif
@@ -49,6 +50,20 @@ void		ft_check_result(int w_status, int *success);
 void		ft_print_result(int w_result);
 # endif
 
+# ifndef FT_PRINT_TEST
+#  define FT_PRINT_TEST
+
+void		ft_print_test(t_test_list *lst);
+
+# endif
+
+# ifndef FT_PRINT_TOTAL
+#  define FT_PRINT_TOTAL
+
+void		ft_print_total(int success, int total);
+
+# endif
+
 # ifndef EXEC_CHILD
 #  define EXEC_CHILD
 
@@ -59,4 +74,11 @@ void		exec_child(t_test_list *lst);
 
 int			ft_launch_test(t_test_list *lst);
 # endif
+
+# ifndef DEL
+#  define DEL
+
+void		del(void *content);
+# endif
+
 #endif

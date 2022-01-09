@@ -4,26 +4,44 @@ LIBFT_PATH	=	./libft/
 
 LIBFT		=	$(addprefix $(LIBFT_PATH),libft.a)
 
-CC			=	clang
+CC			=	gcc
 
-CFLAGS		=	-Wall -Werror -Wextra
+CFLAGS		=	-MMD -Wall -Werror -Wextra
 
-SRCS		=	
+SRCS_PATH	=	./framework/
+
+SRCS		=	$(addprefix $(SRCS_PATH),\
+				ft_check_result.c			\
+				ft_launch_test.c			\
+				ft_print_result.c			\
+				ft_print_test.c				\
+				ft_del.c					\
+				ft_print_total.c			\
+				ft_test_lst_new.c)
 
 OBJS		=	$(SRCS:.c=.o)
+
+DEP			=	$(OBJS:.o=.d)
+
+INC			=	-I ./framework/				\
+				-I ./libft/
 
 all:		$(NAME)
 
 $(NAME):	$(OBJS) $(LIBFT)
+			ar -rcs $(NAME) $^
+
+-include $(DEP)
 
 $(LIBFT):		
 			$(MAKE) -C $(LIBFT_PATH) all
 
 %.o:		%.c
-			$(CC) $(CFLAGS) -c $^ -o $@ -I .
+			$(CC) $(CFLAGS) -c $^ -o $@ $(INC)
 
 clean:
 			rm -f $(OBJS)
+			rm -f $(DEP)
 			$(MAKE) -C $(LIBFT_PATH) clean
 
 fclean:		clean

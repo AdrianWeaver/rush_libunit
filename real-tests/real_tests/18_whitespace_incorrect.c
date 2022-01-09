@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   07_not_digit.c                                     :+:      :+:    :+:   */
+/*   18_whitespace_incorrect.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 10:30:11 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 10:45:48 by aweaver          ###   ########.fr       */
+/*   Created: 2022/01/09 11:53:43 by aweaver           #+#    #+#             */
+/*   Updated: 2022/01/09 18:06:17 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "libunit.h"
-#include "test_ft_atoi.h"
 
-int	test_not_digit(void)
+int	test_whitespace_incorrect(void)
 {
-	if (ft_atoi("a") == 0)
+	if (ft_atoi("\r\r-\r42") == 0)
 		return (0);
 	else
 		return (-1);

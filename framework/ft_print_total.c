@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   06_int_min.c                                       :+:      :+:    :+:   */
+/*   ft_print_total.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 10:29:39 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 13:36:56 by aweaver          ###   ########.fr       */
+/*   Created: 2022/01/09 17:37:21 by aweaver           #+#    #+#             */
+/*   Updated: 2022/01/09 17:57:10 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "libunit.h"
-#include "test_ft_atoi.h"
+#include "libft.h"
 
-int	test_int_min(void)
+void	ft_print_total(int success, int total)
 {
-	if (ft_atoi("-2147483648") == -2147483648)
-		return (0);
-	else
-		return (-1);
+	ft_putnbr_fd(success, 1);
+	ft_putchar_fd('/', 1);
+	ft_putnbr_fd(total, 1);
+	ft_putstr_fd(" test tested successfully!\n", 1);
 }

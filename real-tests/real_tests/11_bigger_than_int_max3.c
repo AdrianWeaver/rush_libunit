@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   14_whitespace_not_digit.c                          :+:      :+:    :+:   */
+/*   11_bigger_than_int_max3.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 12:03:41 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 12:03:43 by aweaver          ###   ########.fr       */
+/*   Created: 2022/01/09 13:05:31 by aweaver           #+#    #+#             */
+/*   Updated: 2022/01/09 18:05:31 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "libunit.h"
-#include "test_ft_atoi.h"
 
-int	test_whitespace_not_digit(void)
+int	test_bigger_than_int_max3(void)
 {
-	if (ft_atoi(" a") == 0)
-		return (0);
-	else
-		return (-1);
+	ft_atoi("9223372036854775809");
+	return (0);
 }

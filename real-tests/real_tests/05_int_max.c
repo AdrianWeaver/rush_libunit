@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   15_whitespace_negative_value.c                     :+:      :+:    :+:   */
+/*   05_int_max.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 11:50:12 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 11:50:48 by aweaver          ###   ########.fr       */
+/*   Created: 2022/01/09 10:28:37 by aweaver           #+#    #+#             */
+/*   Updated: 2022/01/09 18:04:56 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "libunit.h"
-#include "test_ft_atoi.h"
 
-int	test_whitespace_negative_value(void)
+int	test_int_max(void)
 {
-	if (ft_atoi(" -42") == -42)
+	if (ft_atoi("2147483647") == 2147483647)
 		return (0);
 	else
 		return (-1);

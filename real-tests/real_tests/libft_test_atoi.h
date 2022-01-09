@@ -1,17 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_atoi.h                                     :+:      :+:    :+:   */
+/*   libft_test_atoi.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 10:20:48 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 12:08:10 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/09 18:14:06 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TEST_FT_ATOI_H
 # define TEST_FT_ATOI_H
+
+# ifndef FT_ATOI_LAUNCHER
+#  define FT_ATOI_LAUNCHER
+
+int	ft_atoi_launcher(void);
+
+# endif
 
 # ifndef TEST_ODD_VALUES
 #  define TEST_ODD_VALUES
