@@ -1,8 +1,1 @@
-*.d
-*.o
-*.a
-*.swo
-*.swp
-*.pdf
-a.out
 libunit_tester
