@@ -18,7 +18,10 @@ SRCS			=	main.c									\
 				01_ok_test.c								\
 				02_ko_test.c								\
 				03_segfault.c\
-				04_bus_error.c)
+				04_bus_error.c\
+				05_sigabort.c\
+				06_sigfpe.c\
+				07_sigill.c)
 
 OBJS			=	$(SRCS:.c=.o)
 

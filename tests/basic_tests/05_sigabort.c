@@ -6,14 +6,19 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 21:20:00 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 21:27:52 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/09 22:55:08 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <signal.h>
 
 int	ft_test_sigabort(void)
 {
 	if (1)
+	{
+		raise(SIGABRT);
 		return (0);
+	}
 	else
 		return (-1);
 }

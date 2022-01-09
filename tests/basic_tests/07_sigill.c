@@ -6,14 +6,19 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 21:21:46 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 21:28:32 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/09 22:54:19 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <signal.h>
 
 int	ft_test_sigill(void)
 {
 	if (1)
+	{
+		raise(SIGILL);
 		return (0);
+	}
 	else
 		return (-1);
 }
