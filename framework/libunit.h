@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 12:16:55 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 19:28:19 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/21 15:58:27 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,15 @@
 # include <sys/wait.h>
 # include <unistd.h>
 # include "libft.h"
+
+# ifndef FT_COLORS
+#  define COLORS
+#  define BLUE "\033[0;34m"
+#  define RED "\033[0;31m"
+#  define GREEN "\033[0;32m"
+#  define NOCOLOUR "\033[m"
+
+# endif
 
 # ifndef FT_TEST_LST_NEW
 #  define FT_TEST_LST_NEW
@@ -69,10 +78,22 @@ int			ft_launch_test(t_test_list *lst);
 void		del(void *content);
 # endif
 
-# ifndef FT_MAKE_MAGIC
-#  define FT_MAKE_MAGIC
+# ifndef FT_PIPE_STDOUT
+#  define FT_PIPE_STDOUT
 
-int			ft_make_magic(t_test_list *lst);
+int			ft_pipe_stdout(int	*pipefd);
+
+# endif
+# ifndef FT_RESET_STDOUT
+#  define FT_RESET_STDOUT
+
+void		ft_reset_stdout(int *fd_pipe, int stdout_save);
+
+# endif
+# ifndef FT_READ_FD
+#  define FT_READ_FD
+
+char		*ft_read_fd(int fd);
 
 # endif
 #endif

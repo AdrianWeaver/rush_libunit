@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 15:11:35 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 22:45:51 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/21 10:34:12 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	exec_child(t_test_list *lst)
 	exit(fct());
 }
 
-int	ft_make_magic(t_test_list *lst)
+static int	ft_make_magic(t_test_list *lst)
 {
 	ft_putstr_fd("Error: Fork failed.\n", 1);
 	ft_lstclear(&lst, &ft_del);

@@ -6,7 +6,7 @@ CFLAGS			=	-Wall -Wextra -Werror
 
 INC				=	-I ../framework/						\
 					-I ../libft/							\
-					-I ./real_tests/
+					-I ./ft_atoi/
 
 LIBUNIT			=	../libunit.a
 
@@ -36,7 +36,7 @@ SRCS			=	main.c									\
 
 OBJS			=	$(SRCS:.c=.o)
 
-TEST_PATH	=	./real_tests/
+TEST_PATH	=	./ft_atoi/
 
 all:			$(NAME)
 
