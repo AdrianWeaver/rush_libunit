@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 12:16:55 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/21 15:58:27 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/22 13:08:00 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ void		ft_reset_stdout(int *fd_pipe, int stdout_save);
 # ifndef FT_READ_FD
 #  define FT_READ_FD
 
-char		*ft_read_fd(int fd);
+char		*ft_read_fd(int *pipefd, int buffer_size);
 
 # endif
 #endif

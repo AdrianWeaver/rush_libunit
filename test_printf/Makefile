@@ -34,10 +34,13 @@ $(NAME):		$(OBJS) $(LIBUNIT) $(LIBFT) $(LIBFTPRINTF)
 
 $(LIBFT):		
 				$(MAKE) -C ../libft/.
-$(LIBFTPRINTF):
+
+$(LIBFTPRINTF):	
 				$(MAKE) -C ../ft_printf/.
-$(LIBUNIT):
-				$(MAKE) -C ../. 
+
+$(LIBUNIT):		
+				$(MAKE) -C ../. re
+
 clean:
 				$(MAKE) -C ../. clean
 				$(MAKE) -C ../libft/. clean
@@ -48,6 +51,7 @@ fclean:			clean
 
 re:				fclean all
 
-test:			$(NAME)
+test:			
 				./$(NAME)
+	
 .PHONY:			clean fclean all re
