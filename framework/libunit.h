@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 12:16:55 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/22 18:29:02 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/23 12:08:03 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,17 @@
 
 # ifndef FT_COLOURS
 #  define FT_COLOURS
-#  define BLACK "\30[0;31m"
-#  define RED "\31[0;31m"
-#  define GREEN "\32[0;32m"
+#  define BLACK "\33[0;30m"
+#  define RED "\33[0;31m"
+#  define GREEN "\33[0;32m"
 #  define YELLOW "\33[0;33m"
 #  define BLUE "\33[0;34m"
 #  define PINK "\33[0;35m"
 #  define TEAL "\33[0;36m"
 #  define WHITE "\33[0;37m"
-#  define BBLACK "\30[1;31m"
+#  define BBLACK "\33[1;30m"
 #  define BRED "\31[1;31m"
-#  define BGREEN "\32[1;32m"
+#  define BGREEN "\33[1;32m"
 #  define BYELLOW "\33[1;33m"
 #  define BBLUE "\33[1;34m"
 #  define BPINK "\33[1;35m"

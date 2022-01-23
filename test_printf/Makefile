@@ -51,8 +51,8 @@ fclean:			clean
 
 re:				fclean all
 
-test:			re	
-				$(MAKE) -C ../. re
+test:				
+				$(MAKE) -C ./ re && $(MAKE) -C ../. re
 				./$(NAME)
 	
 .PHONY:			clean fclean all re

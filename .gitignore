@@ -2,3 +2,5 @@ libunit_tester
 *.o
 *.d
 *.a
+libunit.a
+*swp

@@ -6,16 +6,18 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 12:10:03 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 18:21:23 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/23 17:22:53 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 #include "libft.h"
 #include "libft_test_atoi.h"
+#include <stdlib.h>
 
 int	ft_atoi_launcher(void)
 {
+	int			ret;
 	t_test_list	*t_atoi;
 	t_test_list	*t_start;
 
@@ -49,5 +51,7 @@ int	ft_atoi_launcher(void)
 			&test_whitespace_alternative2, t_atoi);
 	t_atoi = ft_test_lst_new("ft_atoi", "whitesace_incorrect",
 			&test_whitespace_incorrect, t_atoi);
-	return (ft_launch_test(t_start));
+	ret = ft_launch_test(t_start);
+	ft_lstclear(&t_start, &free);
+	return (ret);
 }
