@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 15:11:35 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/23 19:40:12 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/23 21:03:19 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,11 @@ static int	ft_make_magic(t_test_list *lst)
 
 int	ft_launch_test(t_test_list *lst)
 {
-	int	nb_test;
-	int	success;
-	int	w_status;
-	int	pid;
+	int			nb_test;
+	int			success;
+	int			w_status;
+	int			pid;
+	t_test_list	*tmp;
 
 	success = 0;
 	nb_test = 0;
@@ -49,11 +50,12 @@ int	ft_launch_test(t_test_list *lst)
 			exec_child(lst);
 		ft_print_test(lst);
 		ft_check_result(w_status, &success);
+		tmp = lst;
 		lst = lst->next;
 		nb_test++;
+		ft_lstdelone(tmp, &free);
 	}
 	ft_print_total(success, nb_test);
-	ft_lstclear(&lst, &free);
 	if (success == nb_test)
 		return (0);
 	return (-1);
