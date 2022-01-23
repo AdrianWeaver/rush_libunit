@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 10:20:48 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/21 15:57:31 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/23 18:46:46 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct s_list_test_printf
 	int		ret_ft;
 	int		ret_ptf;
 	char	*ft_str;
-	char	*ptf_str;
+	char	ptf_str[1000];
 }				t_list_test_printf;
 
 # endif

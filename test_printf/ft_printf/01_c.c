@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 11:16:57 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/23 13:20:56 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/23 18:48:29 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,6 @@ int	test_c(void)
 
 	ret = 0;
 	test = "%c\n";
-	list.ptf_str = malloc(sizeof(*list.ptf_str) * (1000));
-	if (list.ptf_str == 0)
-		return (-2);
 	list.ret_ptf = sprintf(list.ptf_str, test, '1');
 	stdout_save = ft_pipe_stdout(pipefd);
 	list.ret_ft = ft_printf(test, '1');
@@ -39,7 +36,6 @@ int	test_c(void)
 		ret = -1;
 	if (ft_strncmp(list.ptf_str, list.ft_str, 10) != 0)
 		ret = -1;
-	free(list.ptf_str);
 	free(list.ft_str);
 	return (ret);
 }

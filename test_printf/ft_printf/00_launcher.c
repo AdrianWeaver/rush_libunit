@@ -6,23 +6,25 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 12:10:03 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/22 15:24:04 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/23 19:05:05 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 #include "libft.h"
 #include "libft_test_ft_printf.h"
+#include <stdlib.h>
 
 int	ft_printf_launcher(void)
 {
+	int			ret;
 	t_test_list	*t_ft_ptf;
 	t_test_list	*t_start;
 
 	t_start = ft_test_lst_new("ft_printf", "01 -", &test_c, NULL);
 	t_ft_ptf = t_start;
 	(void)t_ft_ptf;
-	//t_ft_ptf = ft_test_lst_new("ft_printf", "", &test_c, t_ft_ptf);
+	t_ft_ptf = ft_test_lst_new("ft_printf", "", &test_c, t_ft_ptf);
 	////t_ft_ptf = ft_test_lst_new("ft_printf", "", &test_zero, t_ft_ptf);
 	////t_ft_ptf = ft_test_lst_new("ft_printf", "", &test_minus_zero,
 			////t_ft_ptf);
@@ -49,5 +51,7 @@ int	ft_printf_launcher(void)
 			//&test_whitespace_alternative2, t_ft_ptf);
 	//t_ft_ptf = ft_test_lst_new("ft_printf", "",
 			//&test_whitespace_incorrect, t_ft_ptf);
-	return (ft_launch_test(t_start));
+	ret = ft_launch_test(t_start);
+	ft_lstclear(&t_start, &free);
+	return (ret);
 }

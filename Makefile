@@ -15,7 +15,6 @@ SRCS		=	$(addprefix $(SRCS_PATH),\
 				ft_launch_test.c			\
 				ft_print_result.c			\
 				ft_print_test.c				\
-				ft_del.c					\
 				ft_print_total.c			\
 				ft_pipe_stdout.c			\
 				ft_test_lst_new.c)
