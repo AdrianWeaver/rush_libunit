@@ -6,7 +6,7 @@
 #    By: aweaver <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 10:40:46 by aweaver           #+#    #+#              #
-#    Updated: 2022/01/09 19:49:33 by aweaver          ###   ########.fr        #
+#    Updated: 2022/01/22 18:42:42 by aweaver          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRCS	=		ft_isalpha.c		\
 				ft_isascii.c		\
 				ft_isprint.c		\
 				ft_strlen.c			\
+				ft_strlen_int.c		\
 				ft_memset.c			\
 				ft_bzero.c			\
 				ft_memcpy.c			\
@@ -43,6 +44,9 @@ SRCS	=		ft_isalpha.c		\
 				ft_strmapi.c		\
 				ft_striteri.c		\
 				ft_putchar_fd.c		\
+				ft_putchar_colour.c	\
+				ft_putstr_colour.c	\
+				ft_putstr.c			\
 				ft_putstr_fd.c		\
 				ft_putendl_fd.c		\
 				ft_putnbr_fd.c		\

@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 09:10:49 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/22 13:06:50 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/22 20:58:05 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,14 @@ int	ft_pipe_stdout(int *pipefd)
 	stdout_save = dup(STDOUT_FILENO);
 	pipe(pipefd);
 	dup2(pipefd[1], STDOUT_FILENO);
+	dup2(pipefd[0], STDIN_FILENO);
 	close(pipefd[1]);
 	return (stdout_save);
 }
 
 void	ft_reset_stdout(int	*fd_pipe, int stdout_save)
 {
-	dup2(STDOUT_FILENO, stdout_save);
+	dup2(stdout_save, STDOUT_FILENO);
 	close(fd_pipe[0]);
 }
 
@@ -36,21 +37,15 @@ char	*ft_read_fd(int *pipefd, int buffer_size)
 	char	*buffer;
 	int		bytes_read;
 
+	(void)pipefd;
 	bytes_read = 1;
 	buffer = malloc(sizeof(*buffer) * (buffer_size + 1));
 	if (buffer == 0)
-	{
-		write(2, "malloc1 failed", 15);
 		return (0);
-	}
 	bytes_read = read(pipefd[0], buffer, buffer_size);
 	if (bytes_read == -1)
-	{
 		return (0);
-	}
-	if (bytes_read != -1)
-		buffer[bytes_read] = 0;
-	close(pipefd[0]);
+	buffer[bytes_read] = 0;
 	return (buffer);
 }
 //KEEPING THIS TO TRY TO IMPLEMENT A DYNAMIC SOLUTION OF READ

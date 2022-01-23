@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr_colour.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/08 14:01:24 by emaugale          #+#    #+#             */
-/*   Updated: 2022/01/22 18:08:40 by aweaver          ###   ########.fr       */
+/*   Created: 2022/01/21 14:36:34 by aweaver           #+#    #+#             */
+/*   Updated: 2022/01/22 18:38:16 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include <unistd.h>
 #include "libft.h"
-#include "libft_test_ft_printf.h"
 
-int	main(int ac, char **av)
+int	ft_putstr_colour(char *str, char *colour)
 {
-	(void)ac;
-	(void)av;
-	ft_printf_launcher();
-	return (0);
+	int	str_len;
+
+	str_len = ft_strlen_int(str);
+	ft_putstr(colour);
+	write(1, str, str_len);
+	ft_putstr(NOCOLOUR);
+	return (str_len);
 }

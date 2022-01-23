@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 11:10:46 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 22:42:49 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/22 18:41:22 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,27 @@
 
 # include <unistd.h>
 # include <stddef.h>
+
+# ifndef FT_COLOURS
+#  define FT_COLOURS
+#  define BLACK "\30[0;31m"
+#  define RED "\31[0;31m"
+#  define GREEN "\32[0;32m"
+#  define YELLOW "\33[0;33m"
+#  define BLUE "\33[0;34m"
+#  define PINK "\33[0;35m"
+#  define TEAL "\33[0;36m"
+#  define WHITE "\33[0;37m"
+#  define BBLACK "\30[1;31m"
+#  define BRED "\31[1;31m"
+#  define BGREEN "\32[1;32m"
+#  define BYELLOW "\33[1;33m"
+#  define BBLUE "\33[1;34m"
+#  define BPINK "\33[1;35m"
+#  define BTEAL "\33[1;36m"
+#  define BWHITE "\33[1;37m"
+#  define NOCOLOUR "\33[0m"
+# endif
 
 # ifndef T_LIST_
 #  define T_LIST_
@@ -78,6 +99,13 @@ int				ft_isprint(int c);
 #  define FT_STRLEN_H
 
 size_t			ft_strlen(const char *s);
+
+# endif
+
+# ifndef FT_STRLEN_INT
+#  define FT_STRLEN_INT
+
+int				ft_strlen_int(char *s);
 
 # endif
 
@@ -253,6 +281,20 @@ void			ft_putchar_fd(char c, int fd);
 #  define FT_PUTSTR_FD_H
 
 void			ft_putstr_fd(char *s, int fd);
+
+# endif
+
+# ifndef FT_PUTSTR
+#  define FT_PUTSTR
+
+int				ft_putstr(char *s);
+
+# endif
+
+# ifndef FT_PUTSTR_COLOUR
+#  define FT_PUTSTR_COLOUR
+
+int				ft_putstr_colour(char *s, char *colour);
 
 # endif
 

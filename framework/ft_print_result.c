@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 16:42:01 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 22:05:33 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/22 18:18:19 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 void	ft_print_result(int w_result)
 {
 	if (w_result == 0)
-		ft_putstr_fd("[OK : Test succeeded.]\n", 1);
+		//ft_putstr_fd("[OK : Test succeeded.]\n", 1);
+		ft_putstr_colour("[OK : Test Succeded.]\n", GREEN);
 	else if (w_result == 33)
 		ft_putstr_fd("[KO : Test failed.]\n", 1);
 	else if (w_result == 11)

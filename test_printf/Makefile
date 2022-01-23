@@ -2,7 +2,7 @@ NAME			=	libunit_tester
 
 CC				= 	gcc
 
-CFLAGS			=	-Wall -Wextra -Werror
+CFLAGS			=	-g3 -Wall -Wextra -Werror
 
 INC				=	-I ../framework/						\
 					-I ../libft/							\
@@ -51,7 +51,8 @@ fclean:			clean
 
 re:				fclean all
 
-test:			
+test:			re	
+				$(MAKE) -C ../. re
 				./$(NAME)
 	
 .PHONY:			clean fclean all re

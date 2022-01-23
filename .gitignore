@@ -1,1 +1,4 @@
 libunit_tester
+*.o
+*.d
+*.a

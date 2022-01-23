@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 12:16:55 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/22 13:08:00 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/22 18:29:02 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,37 @@
 # include <unistd.h>
 # include "libft.h"
 
-# ifndef FT_COLORS
-#  define COLORS
-#  define BLUE "\033[0;34m"
-#  define RED "\033[0;31m"
-#  define GREEN "\033[0;32m"
-#  define NOCOLOUR "\033[m"
+# ifndef FT_COLOURS
+#  define FT_COLOURS
+#  define BLACK "\30[0;31m"
+#  define RED "\31[0;31m"
+#  define GREEN "\32[0;32m"
+#  define YELLOW "\33[0;33m"
+#  define BLUE "\33[0;34m"
+#  define PINK "\33[0;35m"
+#  define TEAL "\33[0;36m"
+#  define WHITE "\33[0;37m"
+#  define BBLACK "\30[1;31m"
+#  define BRED "\31[1;31m"
+#  define BGREEN "\32[1;32m"
+#  define BYELLOW "\33[1;33m"
+#  define BBLUE "\33[1;34m"
+#  define BPINK "\33[1;35m"
+#  define BTEAL "\33[1;36m"
+#  define BWHITE "\33[1;37m"
+#  define NOCOLOUR "\33[0m"
+# endif
+
+# ifndef T_TEST_LIST
+#  define T_TEST_LIST
+
+typedef struct s_test_list
+{
+	char				*routine_name;
+	char				*test_name;
+	int					(*funct)(void);
+	struct s_test_list	*next;
+}				t_test_list;
 
 # endif
 

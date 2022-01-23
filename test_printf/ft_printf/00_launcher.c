@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 12:10:03 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/22 12:00:55 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/22 15:24:04 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_printf_launcher(void)
 	t_start = ft_test_lst_new("ft_printf", "01 -", &test_c, NULL);
 	t_ft_ptf = t_start;
 	(void)t_ft_ptf;
-	t_ft_ptf = ft_test_lst_new("ft_printf", "", &test_c, t_ft_ptf);
+	//t_ft_ptf = ft_test_lst_new("ft_printf", "", &test_c, t_ft_ptf);
 	////t_ft_ptf = ft_test_lst_new("ft_printf", "", &test_zero, t_ft_ptf);
 	////t_ft_ptf = ft_test_lst_new("ft_printf", "", &test_minus_zero,
 			////t_ft_ptf);
