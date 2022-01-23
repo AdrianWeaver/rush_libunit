@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 11:16:57 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/23 11:17:02 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/23 13:20:56 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,30 +23,23 @@ int	test_c(void)
 	int					pipefd[2];
 	int					stdout_save;
 	int					ret;
+	char				*test;
 
-	printf("made it in test_c");
 	ret = 0;
+	test = "%c\n";
+	list.ptf_str = malloc(sizeof(*list.ptf_str) * (1000));
+	if (list.ptf_str == 0)
+		return (-2);
+	list.ret_ptf = sprintf(list.ptf_str, test, '1');
 	stdout_save = ft_pipe_stdout(pipefd);
-	list.ret_ptf = printf("%c", 'a');
-	list.ptf_str = ft_read_fd(pipefd[0]);
-	ft_reset_stdout(pipefd, stdout_save);
-	stdout_save = ft_pipe_stdout(pipefd);
-	list.ret_ft = ft_printf("%c", 'a');
-	list.ft_str = ft_read_fd(pipefd[0]);
+	list.ret_ft = ft_printf(test, '1');
+	list.ft_str = ft_read_fd(pipefd, list.ret_ptf + 2);
 	ft_reset_stdout(pipefd, stdout_save);
 	if (list.ret_ft != list.ret_ptf)
 		ret = -1;
 	if (ft_strncmp(list.ptf_str, list.ft_str, 10) != 0)
 		ret = -1;
-	printf("Ptf: %s\nFt_ptf: %s\n", list.ptf_str, list.ft_str);
 	free(list.ptf_str);
 	free(list.ft_str);
 	return (ret);
-}
-
-int	main(void)
-{
-	printf("yeah\n");
-	test_c();
-	return (0);
 }
