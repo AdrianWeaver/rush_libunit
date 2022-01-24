@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 10:20:48 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/24 09:10:24 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/24 11:42:52 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # ifndef FT_PRINTF_XLAUNCHER
 #  define FT_PRINTF_XLAUNCHER
 
-int	ft_printf_xlauncher(void);
+int	ft_printf_xcapslauncher(void);
 
 # endif
 

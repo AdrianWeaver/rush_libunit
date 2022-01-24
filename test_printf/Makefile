@@ -7,8 +7,10 @@ CFLAGS			=	-g3 -Wall -Wextra -Werror
 INC				=	-I ../framework/						\
 					-I ../libft/							\
 					-I ./mandatory/							\
+					-I ./c_mandatory/						\
 					-I ./x_mandatory/						\
 					-I ./X_mandatory/						\
+					-I .									\
 					-I ../ft_printf/includes/
 
 LIBUNIT			=	../libunit.a
@@ -29,6 +31,16 @@ SRCS			=	main.c									\
 				07_x.c										\
 				08_X.c										\
 				09_%.c)										\
+				$(addprefix $(M_c_PATH),\
+				00_launcher.c								\
+				01_c.c										\
+				02_c.c										\
+				03_c.c										\
+				04_c.c										\
+				05_c.c										\
+				06_c.c										\
+				07_c.c										\
+				08_c.c)										\
 				$(addprefix $(M_x_PATH),\
 				00_launcher.c								\
 				01_x.c										\
@@ -56,6 +68,7 @@ MANDATORY_P =	./mandatory/
 
 M_x_PATH	=	./x_mandatory/
 M_X_PATH	=	./X_mandatory/
+M_c_PATH	=	./c_mandatory/
 
 all:			$(NAME)
 
