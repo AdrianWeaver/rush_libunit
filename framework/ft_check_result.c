@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 16:42:01 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/09 22:25:19 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/24 15:46:07 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "libft.h"
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <stdio.h>
 
 void	ft_check_result(int w_status, int *success)
 {
@@ -24,9 +25,7 @@ void	ft_check_result(int w_status, int *success)
 	{
 		w_result = WEXITSTATUS(w_status);
 		if (w_result != 0)
-		{
-			ft_print_result(33);
-		}
+			ft_print_result(w_result);
 		else
 		{
 			ft_print_result(w_result);

@@ -6,11 +6,7 @@ CFLAGS			=	-g3 -Wall -Wextra -Werror
 
 INC				=	-I ../framework/						\
 					-I ../libft/							\
-					-I ./mandatory/							\
-					-I ./c_mandatory/						\
-					-I ./x_mandatory/						\
-					-I ./X_mandatory/						\
-					-I .									\
+					-I.										\
 					-I ../ft_printf/includes/
 
 LIBUNIT			=	../libunit.a
@@ -41,6 +37,16 @@ SRCS			=	main.c									\
 				06_c.c										\
 				07_c.c										\
 				08_c.c)										\
+				$(addprefix $(M_s_PATH),\
+				00_launcher.c								\
+				01_s.c										\
+				02_s.c										\
+				03_s.c										\
+				04_s.c										\
+				05_s.c										\
+				06_s.c										\
+				07_s.c										\
+				08_s.c)										\
 				$(addprefix $(M_x_PATH),\
 				00_launcher.c								\
 				01_x.c										\
@@ -69,6 +75,7 @@ MANDATORY_P =	./mandatory/
 M_x_PATH	=	./x_mandatory/
 M_X_PATH	=	./X_mandatory/
 M_c_PATH	=	./c_mandatory/
+M_s_PATH	=	./s_mandatory/
 
 all:			$(NAME)
 
@@ -97,8 +104,8 @@ fclean:			clean
 
 re:				fclean all
 
-test:				
-				$(MAKE) -C ./ re && $(MAKE) -C ../. re
+test:			$(LIBUNIT)		
+				$(MAKE) -C ./ re
 				./$(NAME)
 	
 .PHONY:			clean fclean all re

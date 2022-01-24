@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 12:10:03 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/24 11:45:45 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/24 11:54:13 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int	ft_printf_clauncher(void)
 	t_ft_ptf = t_start;
 	(void)t_ft_ptf;
 	t_ft_ptf = ft_test_lst_new("%c mandatory", "%c\\n", &test_c02, t_ft_ptf);
-	t_ft_ptf = ft_test_lst_new("%c mandatory", "toto \\n", &test_c03, t_ft_ptf);
+	t_ft_ptf = ft_test_lst_new("%c mandatory", "toto %c\\n", &test_c03,
+			t_ft_ptf);
 	t_ft_ptf = ft_test_lst_new("%c mandatory", "%%%c", &test_c04, t_ft_ptf);
 	t_ft_ptf = ft_test_lst_new("%c mandatory", "%%%c\\n", &test_c05, t_ft_ptf);
 	t_ft_ptf = ft_test_lst_new("%c mandatory", "%%\\n%c", &test_c06, t_ft_ptf);

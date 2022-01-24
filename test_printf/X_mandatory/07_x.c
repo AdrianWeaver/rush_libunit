@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 08:50:44 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/24 09:58:11 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/24 12:27:31 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "libunit.h"
 #include "libft.h"
 #include "libftprintf.h"
-#include "libft_xcapsmandatory.h"
+#include "libft_mandatory.h"
 #include <limits.h>
 
 int	test_X07(void)

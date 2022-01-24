@@ -6,7 +6,7 @@
 #    By: aweaver <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 10:40:46 by aweaver           #+#    #+#              #
-#    Updated: 2022/01/24 11:31:12 by aweaver          ###   ########.fr        #
+#    Updated: 2022/01/24 12:52:58 by aweaver          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,9 @@ SRCS	=		ft_isalpha.c		\
 				ft_lstadd_back.c	\
 				ft_lstdelone.c		\
 				ft_lstclear.c		\
-				ft_lstiter.c
+				ft_lstiter.c		\
+				get_next_line.c		\
+				get_next_line_utils.c
 
 OBJS		=	$(SRCS:.c=.o)
 

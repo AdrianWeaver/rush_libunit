@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 12:16:55 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/23 12:08:03 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/24 14:37:02 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # include <sys/wait.h>
 # include <unistd.h>
 # include "libft.h"
+
+# ifndef TIMEOUT
+#  define TIMEOUT 3
+# endif
 
 # ifndef FT_COLOURS
 #  define FT_COLOURS

@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 10:20:48 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/24 11:44:32 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/24 12:26:31 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,134 +34,77 @@ typedef struct s_list_test_printf
 }				t_list_test_printf;
 
 # endif
-# ifndef FT_PRINTF_XLAUNCHER
-#  define FT_PRINTF_XLAUNCHER
+# ifndef FT_PRINTF_LAUNCHERS
+#  define FT_PRINTF_LAUNCHERS
 
+int	ft_printf_clauncher(void);
+int	ft_printf_slauncher(void);
+int	ft_printf_plauncher(void);
+int	ft_printf_dlauncher(void);
+int	ft_printf_ilauncher(void);
+int	ft_printf_ulauncher(void);
 int	ft_printf_xlauncher(void);
-# endif
-# ifndef FT_PRINTF_XCAPSLAUNCHER
-#  define FT_PRINTF_XCAPSLAUNCHER
-
 int	ft_printf_xcapslauncher(void);
 # endif
-# ifndef TEST_C
-#  define TEST_C
+
+# ifndef TEST_M
+#  define TEST_M
 
 int	test_c(void);
-
-# endif
-
-# ifndef TEST_S
-#  define TEST_S
-
 int	test_s(void);
-
-# endif
-
-# ifndef TEST_P
-#  define TEST_P
-
 int	test_p(void);
-
-# endif
-
-# ifndef TEST_D
-#  define TEST_D
-
 int	test_d(void);
-
-# endif
-
-# ifndef TEST_I
-#  define TEST_I
-
 int	test_i(void);
+int	test_u(void);
+int	test_x(void);
+int	test_X(void);
+int	test_percent(void);
 
 # endif
 
-# ifndef TEST_U
-#  define TEST_U
-
-int	test_u(void);
+# ifndef TEST_C
+#  define TEST_C
+int	test_c01(void);
+int	test_c02(void);
+int	test_c03(void);
+int	test_c04(void);
+int	test_c05(void);
+int	test_c06(void);
+int	test_c07(void);
+int	test_c08(void);
 
 # endif
 
 # ifndef TEST_X
 #  define TEST_X
-
-int	test_x(void);
-int	test_X(void);
-
-# endif
-
-# ifndef TEST_PERCENT
-#  define TEST_PERCENT
-
-int	test_percent(void);
-
-# endif
-
-# ifndef TEST_C01
-#  define TEST_C01
-
-int	test_c01(void);
-
-# endif
-
-# ifndef TEST_C02
-#  define TEST_C02
-
-int	test_c02(void);
+int	test_x01(void);
+int	test_x02(void);
+int	test_x03(void);
+int	test_x04(void);
+int	test_x05(void);
+int	test_x06(void);
+int	test_x07(void);
+int	test_x08(void);
+int	test_X01(void);
+int	test_X02(void);
+int	test_X03(void);
+int	test_X04(void);
+int	test_X05(void);
+int	test_X06(void);
+int	test_X07(void);
+int	test_X08(void);
 
 # endif
 
-# ifndef TEST_C03
-#  define TEST_C03
-
-int	test_c03(void);
-
+# ifndef TEST_S
+#  define TEST_S
+int	test_s01(void);
+int	test_s02(void);
+int	test_s03(void);
+int	test_s04(void);
+int	test_s05(void);
+int	test_s06(void);
+int	test_s07(void);
+int	test_s08(void);
 # endif
-
-# ifndef TEST_C04
-#  define TEST_C04
-
-int	test_c04(void);
-
-# endif
-
-# ifndef TEST_C05
-#  define TEST_C05
-
-int	test_c05(void);
-
-# endif
-
-# ifndef TEST_C06
-#  define TEST_C06
-
-int	test_c06(void);
-
-# endif
-
-# ifndef TEST_C07
-#  define TEST_C07
-
-int	test_c07(void);
-
-# endif
-
-# ifndef TEST_C08
-#  define TEST_C08
-
-int	test_c08(void);
-
-# endif
-
-# ifndef FT_PRINTF_CLAUNCHER
-#  define FT_PRINTF_CLAUNCHER
-
-int	ft_printf_clauncher(void);
-
-# endif
-
 #endif

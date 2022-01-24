@@ -6,13 +6,13 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 12:10:03 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/24 11:42:27 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/24 12:21:17 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 #include "libft.h"
-#include "libft_xcapsmandatory.h"
+#include "libft_mandatory.h"
 #include <stdlib.h>
 
 int	ft_printf_xcapslauncher(void)

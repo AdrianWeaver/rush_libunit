@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 15:11:35 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/23 22:29:03 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/24 14:53:47 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,20 @@
 #include "libunit.h"
 #include <stdlib.h>
 
+static void	kill_child(int sig)
+{
+	(void)sig;
+	exit(SIGALRM);
+}
+
 void	exec_child(t_test_list *lst)
 {
 	int	(*fct)(void);
 
 	fct = lst->funct;
 	ft_lstclear(&lst, &free);
+	signal(SIGALRM, kill_child);
+	alarm(TIMEOUT);
 	exit(fct());
 }
 
@@ -27,7 +35,7 @@ static int	ft_make_magic(t_test_list *lst)
 {
 	ft_putstr_fd("Error: Fork failed.\n", 1);
 	ft_lstclear(&lst, &free);
-	return (-1);
+	return (-2);
 }
 
 int	ft_launch_test(t_test_list *lst)

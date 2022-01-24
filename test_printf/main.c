@@ -6,15 +6,13 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 14:01:24 by emaugale          #+#    #+#             */
-/*   Updated: 2022/01/24 11:43:24 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/24 12:28:18 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 #include "libft.h"
 #include "libft_mandatory.h"
-#include "libft_xmandatory.h"
-#include "libft_xcapsmandatory.h"
 
 int	main(int ac, char **av)
 {
@@ -26,16 +24,17 @@ int	main(int ac, char **av)
 		if (ac == 1 || ft_strcmp(av[i], "bonus") == 0)
 		{
 			ft_printf_launcher();
+			ft_printf_clauncher();
+			ft_printf_slauncher();
 			ft_printf_xlauncher();
 			ft_printf_xcapslauncher();
-			ft_printf_clauncher();
 		}
 		else if (ft_strcmp(av[i], "mandatory") == 0)
 			ft_printf_launcher();
 		else if (ft_strcmp(av[i], "c") == 0)
 			ft_printf_clauncher();
-		//else if (ft_strcmp(av[i], "s") == 0)
-			//ft_printf_slauncher();
+		else if (ft_strcmp(av[i], "s") == 0)
+			ft_printf_slauncher();
 		//else if (ft_strcmp(av[i], "p") == 0)
 			//ft_printf_plauncher();
 		//else if (ft_strcmp(av[i], "d") == 0)
