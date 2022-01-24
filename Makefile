@@ -45,6 +45,9 @@ fclean:		clean
 
 re:			fclean all
 
-test:		all #ajouter suite de cette ligne 
+test:		all
+			$(MAKE) -C ./test_printf/
+
+printf:		test
 
 .PHONY:		all re clean fclean
