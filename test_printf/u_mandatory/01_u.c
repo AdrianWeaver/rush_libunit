@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   07_x.c                                             :+:      :+:    :+:   */
+/*   01_u.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/24 08:50:44 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/26 20:18:20 by aweaver          ###   ########.fr       */
+/*   Created: 2022/01/28 09:50:41 by aweaver           #+#    #+#             */
+/*   Updated: 2022/01/28 10:03:43 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,28 @@
 #include "libft_mandatory.h"
 #include <limits.h>
 
-int	test_X07(void)
+int	test_u01(void)
 {
 	t_list_test_printf	list;
 	int					pipefd[2];
 	int					ret;
-	int					tab[7];
+	unsigned int		tab[7];
 	int					i;
 
 	tab[0] = 0;
-	tab[1] = -0;
+	tab[1] = 97;
 	tab[2] = 42;
 	tab[3] = INT_MAX;
-	tab[4] = INT_MIN;
+	tab[4] = UINT_MAX;
 	tab[5] = 10;
-	tab[6] = -10;
+	tab[6] = 1;
 	ret = 0;
 	i = 0;
 	while (i < 7)
 	{
-		list.ret_ptf = sprintf(list.ptf_str, "X\33%X\t\n", tab[i]);
+		list.ret_ptf = sprintf(list.ptf_str, "%u", tab[i]);
 		ft_pipe_stdout(pipefd);
-		list.ret_ft = ft_printf("X\33%X\t\n", tab[i]);
+		list.ret_ft = ft_printf("%u", tab[i]);
 		list.ft_str = ft_read_fd(pipefd, list.ret_ptf + 2);
 		ft_reset_stdout(pipefd, 1);
 		if (list.ret_ft != list.ret_ptf)

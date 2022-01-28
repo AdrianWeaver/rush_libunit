@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 08:50:44 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/24 08:56:17 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/26 20:17:55 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	test_x07(void)
 	{
 		list.ret_ptf = sprintf(list.ptf_str, "x\33%x\t\n", tab[i]);
 		ft_pipe_stdout(pipefd);
-		list.ret_ft = ft_printf("x\33%x\n", tab[i]);
+		list.ret_ft = ft_printf("x\33%x\t\n", tab[i]);
 		list.ft_str = ft_read_fd(pipefd, list.ret_ptf + 2);
 		ft_reset_stdout(pipefd, 1);
 		if (list.ret_ft != list.ret_ptf)

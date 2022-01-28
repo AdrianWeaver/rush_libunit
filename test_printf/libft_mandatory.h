@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 10:20:48 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/24 12:26:31 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/28 09:54:40 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int	test_percent(void);
 
 # ifndef TEST_C
 #  define TEST_C
+
 int	test_c01(void);
 int	test_c02(void);
 int	test_c03(void);
@@ -77,6 +78,7 @@ int	test_c08(void);
 
 # ifndef TEST_X
 #  define TEST_X
+
 int	test_x01(void);
 int	test_x02(void);
 int	test_x03(void);
@@ -98,6 +100,7 @@ int	test_X08(void);
 
 # ifndef TEST_S
 #  define TEST_S
+
 int	test_s01(void);
 int	test_s02(void);
 int	test_s03(void);
@@ -107,4 +110,19 @@ int	test_s06(void);
 int	test_s07(void);
 int	test_s08(void);
 # endif
+
+# ifndef TEST_U
+#  define TEST_U
+
+int	test_u01(void);
+int	test_u02(void);
+int	test_u03(void);
+int	test_u04(void);
+int	test_u05(void);
+int	test_u06(void);
+int	test_u07(void);
+int	test_u08(void);
+
+# endif
+
 #endif

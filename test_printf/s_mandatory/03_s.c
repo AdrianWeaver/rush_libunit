@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 11:06:13 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/24 14:26:21 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/26 13:33:16 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	test_s03(void)
 	const char			*tab[8];
 	int					i;
 
-	tab[0] = 0;
+	tab[0] = "";
 	tab[1] = "toto a la plage";
 	tab[2] = "\33\32\33\32\n\t";
 	tab[3] = "A";

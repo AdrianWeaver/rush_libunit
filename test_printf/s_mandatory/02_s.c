@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 11:06:03 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/24 14:25:59 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/26 13:58:28 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	test_s02(void)
 	t_list_test_printf	list;
 	int					pipefd[2];
 	int					ret;
-	char			*tab[8];
+	const char			*tab[8];
 	int					i;
 
 	tab[0] = "";
@@ -47,7 +47,6 @@ int	test_s02(void)
 		if (ft_strncmp(list.ptf_str, list.ft_str, list.ret_ptf + 2) != 0)
 			ret = -1;
 		free(list.ft_str);
-		free(&tab[i]);
 		i++;
 	}
 	return (ret);

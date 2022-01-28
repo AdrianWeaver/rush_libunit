@@ -57,6 +57,16 @@ SRCS			=	main.c									\
 				06_x.c										\
 				07_x.c										\
 				08_x.c)										\
+				$(addprefix $(M_u_PATH),\
+				00_launcher.c								\
+				01_u.c										\
+				02_u.c										\
+				03_u.c										\
+				04_u.c										\
+				05_u.c										\
+				06_u.c										\
+				07_u.c										\
+				08_u.c)										\
 				$(addprefix $(M_X_PATH),\
 				00_launcher.c								\
 				01_x.c										\
@@ -76,6 +86,7 @@ M_x_PATH	=	./x_mandatory/
 M_X_PATH	=	./X_mandatory/
 M_c_PATH	=	./c_mandatory/
 M_s_PATH	=	./s_mandatory/
+M_u_PATH	=	./u_mandatory/
 
 all:			$(NAME)
 
