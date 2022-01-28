@@ -6,7 +6,7 @@
 /*   By: aweaver <aweaver@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 09:51:24 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/28 09:51:32 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/28 10:49:41 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ int	test_u05(void)
 	t_list_test_printf	list;
 	int					pipefd[2];
 	int					ret;
-	int					tab[7];
+	unsigned int		tab[7];
 	int					i;
 
 	tab[0] = 0;
-	tab[1] = -0;
+	tab[1] = 97;
 	tab[2] = 42;
 	tab[3] = INT_MAX;
-	tab[4] = INT_MIN;
+	tab[4] = UINT_MAX;
 	tab[5] = 10;
-	tab[6] = -10;
+	tab[6] = 1;
 	ret = 0;
 	i = 0;
 	while (i < 7)
