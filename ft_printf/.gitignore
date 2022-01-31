@@ -1,0 +1,11 @@
+objects/
+a.out*
+*swo
+*swp
+*pdf
+*.o
+libftprintf.a
+pft/
+pft*/
+*.a
+*.d
