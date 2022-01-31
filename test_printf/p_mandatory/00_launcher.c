@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 12:10:03 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/24 08:07:36 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/28 11:02:26 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,22 @@
 #include "libft_mandatory.h"
 #include <stdlib.h>
 
-int	ft_printf_launcher(void)
+int	ft_printf_plauncher(void)
 {
 	int			ret;
 	t_test_list	*t_ft_ptf;
 	t_test_list	*t_start;
 
-	t_start = ft_test_lst_new("ft_printf", "%c", &test_c, NULL);
+	t_start = ft_test_lst_new("%p mandatory", "%p", &test_p01, NULL);
 	t_ft_ptf = t_start;
-	(void)t_ft_ptf;
-	t_ft_ptf = ft_test_lst_new("ft_printf", "%s", &test_s, t_ft_ptf);
-	t_ft_ptf = ft_test_lst_new("ft_printf", "%p", &test_p, t_ft_ptf);
-	t_ft_ptf = ft_test_lst_new("ft_printf", "%d", &test_d, t_ft_ptf);
-	t_ft_ptf = ft_test_lst_new("ft_printf", "%i", &test_i, t_ft_ptf);
-	t_ft_ptf = ft_test_lst_new("ft_printf", "%u", &test_u, t_ft_ptf);
-	t_ft_ptf = ft_test_lst_new("ft_printf", "%x", &test_x, t_ft_ptf);
-	t_ft_ptf = ft_test_lst_new("ft_printf", "%X", &test_X, t_ft_ptf);
-	t_ft_ptf = ft_test_lst_new("ft_printf", "%%", &test_percent, t_ft_ptf);
+	t_ft_ptf = ft_test_lst_new("%p mandatory", "%p\\n", &test_p02, t_ft_ptf);
+	t_ft_ptf = ft_test_lst_new("%p mandatory", "toto %p", &test_p03, t_ft_ptf);
+	t_ft_ptf = ft_test_lst_new("%p mandatory", "%%%p", &test_p04, t_ft_ptf);
+	t_ft_ptf = ft_test_lst_new("%p mandatory", "%%%p\\n", &test_p05, t_ft_ptf);
+	t_ft_ptf = ft_test_lst_new("%p mandatory", "%%\\n%p", &test_p06, t_ft_ptf);
+	t_ft_ptf = ft_test_lst_new("%p mandatory", "p\\33%p\\n",
+			&test_p07, t_ft_ptf);
+	t_ft_ptf = ft_test_lst_new("%p mandatory", "%%p%p", &test_p08, t_ft_ptf);
 	ret = ft_launch_test(t_start);
 	return (ret);
 }

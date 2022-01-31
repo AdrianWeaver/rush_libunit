@@ -6,7 +6,7 @@
 /*   By: aweaver <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 10:20:48 by aweaver           #+#    #+#             */
-/*   Updated: 2022/01/28 09:54:40 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/28 11:04:37 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,4 +125,17 @@ int	test_u08(void);
 
 # endif
 
+# ifndef TEST_P
+#  define TEST_P
+
+int	test_p01(void);
+int	test_p02(void);
+int	test_p03(void);
+int	test_p04(void);
+int	test_p05(void);
+int	test_p06(void);
+int	test_p07(void);
+int	test_p08(void);
+
+# endif
 #endif

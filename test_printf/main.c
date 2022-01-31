@@ -6,7 +6,7 @@
 /*   By: emaugale <emaugale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 14:01:24 by emaugale          #+#    #+#             */
-/*   Updated: 2022/01/28 09:57:50 by aweaver          ###   ########.fr       */
+/*   Updated: 2022/01/28 11:03:57 by aweaver          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	main(int ac, char **av)
 			ft_printf_launcher();
 			ft_printf_clauncher();
 			ft_printf_slauncher();
+			ft_printf_plauncher();
 			ft_printf_ulauncher();
 			ft_printf_xlauncher();
 			ft_printf_xcapslauncher();
@@ -36,8 +37,8 @@ int	main(int ac, char **av)
 			ft_printf_clauncher();
 		else if (ft_strcmp(av[i], "s") == 0)
 			ft_printf_slauncher();
-		//else if (ft_strcmp(av[i], "p") == 0)
-			//ft_printf_plauncher();
+		else if (ft_strcmp(av[i], "p") == 0)
+			ft_printf_plauncher();
 		//else if (ft_strcmp(av[i], "d") == 0)
 			//ft_printf_dlauncher();
 		//else if (ft_strcmp(av[i], "i") == 0)
